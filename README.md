@@ -43,10 +43,24 @@ Just Nest + Fastify done right.
 - **Jest**
 - **ESLint + Prettier**
 
----
-
 ## 📦 Project setup
 
 ```bash
 pnpm install
 ```
+
+---
+
+## ☁️ Deployment on Vercel
+
+If you are deploying this template to **Vercel**, you need to ensure the correct package manager version is used since this project relies on **pnpm 11**.
+
+To configure this:
+
+1. Go to your **Vercel Dashboard** → **Project Settings** → **Environment Variables**.
+2. Add the following environment variable:
+   - **Key:** `ENABLE_EXPERIMENTAL_COREPACK`
+   - **Value:** `1`
+
+This will activate Corepack in Vercel's build environment, ensuring it respects the `"packageManager"` field defined in your `package.json` and runs with the correct PNPM version.
+
